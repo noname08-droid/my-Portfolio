@@ -110,15 +110,24 @@ nav a {
     background-color: #292626;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding: 5rem;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
 }
 
 .hubby {
     width: 30%;
-    position: absolute;
+    float: left;
+    margin: 10px;
 }
 
-.hubby h2 {
+#about h2 {
     color: var(--title-color);
     border-bottom: 1px solid;
     font-weight: bold;
@@ -138,18 +147,46 @@ nav a {
 .hubby p {
     float: left;
     color: var(--paragraph-color);
+    padding-right: 30px;
 }
 
+
+.skills {
+    width: 30%;
+    float: left;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills h3 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: bold;
+    font-size: 60px;
+    color: var(--primary-color);
+}
+
+.knowledge {
+    display: flex;
+}
+
+.knowledge p {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    font-weight: 600;
+}
 
 
 
 /* mouse anim*/
 #mouse-scroll {
-    position: absolute;
-    margin: auto;
     left: 50%;
-    top: 40em;
+    top: 110em;
     z-index: 2;
+    position: absolute;
 }
 
 #mouse-scroll span {
@@ -302,10 +339,16 @@ a:hover::after {
     }
 
     #mouse-scroll {
-        position: absolute;
-        margin: auto;
-        left: 50%;
-        top: 35em;
+        visibility: hidden;
+        display: none;
+    }
+
+    .about-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
     }
 
 
@@ -332,6 +375,7 @@ a:hover::after {
         letter-spacing: 10px;
     }
 
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -356,8 +400,9 @@ a:hover::after {
         z-index: 5;
     }
 
-    #mouse-scroll {
+    .skills {
         visibility: hidden;
+        display: none;
     }
 
 
@@ -535,7 +580,7 @@ a:hover::after {
     position: static;
     padding: 0 5rem;
     flex-direction: column;
-    padding-bottom: 5rem;
+    padding: 5rem;
 }
 
 #contact h2 {
