@@ -319,7 +319,7 @@ a:hover::after {
     }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1500px) and (max-height: 1000px) {
     .container h2 {
         z-index: 1;
         position: relative;
@@ -533,7 +533,7 @@ a:hover::after {
     width: 100%;
     max-width: 540px;
     height: 100%;
-    max-height: 405px;
+    max-height: 550px;
     overflow: hidden;
     object-fit: fill;
     border-top-right-radius: 10px;
