@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawer Navigation</title>
+    <link rel="stylesheet" href="./drawer_navigation.css">
+
+    <script>
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="position">
+            <div class="dropdown">
+                <img class="dropbtn" onclick="myFunction()" src="./listview.png">
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="https://github.com/noname08-droid" target="_blank"><img
+                            style="height: 40px; width: 40px; filter: brightness(0) invert(1);"
+                            src="./github.png" /></a>
+                    <a href="/User/Clone Project/my-portfolio/my-Portfolio/portfolio.html#contact">Contact</a>
+                    <a href="/User/Clone Project/my-portfolio/my-Portfolio/portfolio.html#work">Work</a>
+                    <a href="/User/Clone Project/my-portfolio/my-Portfolio/portfolio.html#about">About</a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="https://github.com/noname08-droid" target="_blank"><img src="./github.png" class="github" /></a>
+            <a href="/User/Clone Project/my-portfolio/my-Portfolio/portfolio.html#contact">Contact</a>
+            <a href="/User/Clone Project/my-portfolio/my-Portfolio/portfolio.html#work">Work</a>
+            <a href="/User/Clone Project/my-portfolio/my-Portfolio/portfolio.html#about">About</a>
+        </nav>
+        <div class="home">
+            <a href="/User/Clone%20Project/my-portfolio/my-Portfolio/portfolio.html#home">Cej
+                Studios</a>
+        </div>
+
+    </header>
+
+    <div class="project-overview">
+        <div class="project-img">
+            <h1>Drawer <br>Nav</h1>
+            <p>Drawer navigation is often used in conjunction with other navigation patterns,
+                such as tabs or bottom navigation, to provide users with a variety of options for navigating an app.
+                It is a popular design pattern because it allows users to quickly access important features or content,
+                without taking up too much space on the screen.</p>
+            <div class="link-pos">
+                <a href="https://github.com/noname08-droid/DrawerNav" class="open-project" target="_blank">Open
+                    Project</a>
+            </div>
+            <div class="preview">
+                <video src="./demo.mp4" width="640" height="360" autoplay loop muted controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <img src="./image1.jpg">
+            <img src="./image2.jpg">
+            <img src="./image3.jpg">
+            <img src="./image4.jpg">
+            <img src="./image5.jpg">
+            <img src="./image6.jpg">
+        </div>
+    </div>
+
+</body>
+
+</html>
